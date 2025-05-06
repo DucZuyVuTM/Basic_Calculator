@@ -78,12 +78,7 @@ input[type="number"] {
     margin: 0 2px 2px 2px;
 }
 
-.result-disabled {
-    display: none;
-}
-
 #del-btn {
-    display: none;
     padding: 10px 20px;
     background-color: blue;
     color: white;

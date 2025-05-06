@@ -3,19 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lấy nút del-btn
     const delBtn = document.getElementById("del-btn");
+    const resultDiv = document.getElementById("result-div");
     window.delBtn = delBtn;
-    if (!delBtn) {
-        console.error("Element with id 'del-btn' not found.");
-        return;
-    }
+    window.resultDiv = resultDiv;
 
     // Hàm điều khiển hiển thị/ẩn del-btn
     function ctrlDelBtn(cmd) {
         console.log("ctrlDelBtn called with cmd:", cmd);
         if (cmd === "ADD") {
-            delBtn.style.display = "inline";
+            resultDiv.style.display = "inline";
         } else if (cmd === "REMOVE") {
-            delBtn.style.display = "none";
+            resultDiv.style.display = "none";
         }
     }
 
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     delBtn.addEventListener("click", () => {
         const resultElement = document.getElementById("result");
         if (resultElement) {
-            resultElement.classList.add("result-disabled");
             ctrlDelBtn("REMOVE");
         }
     });
