@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Thiết lập biến môi trường (PORT mặc định cho Render)
-ENV PORT=5000
+ENV PORT=8079
 
 # Chạy ứng dụng
 CMD ["python", "app.py"]
