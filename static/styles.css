@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#main-container {
+    max-width: 775px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+    margin: 0;
+}
+
+form:last-child {
+    margin-bottom: 0;
+}
+
+#del-btn {
+    background-color: blue;
+    text-align: center;
+}
+
+#send-btn {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: darkblue;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#result-div {
+    text-align: center;
+}
+
+#result {
+    border: red 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 2px 2px 2px;
+}
+
+.result-disabled {
+    display: none;
+}
+
+#del-btn {
+    display: none;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#del-btn:hover {
+    background-color: darkblue;
+}
+
+@media (max-width: 775px) {
+    #send-btn {
+        width: 100%;
+        padding: 11px;
+    }
+
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    input[type="number"] {
+        width: calc(50% - 5px);
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 710px) {
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 7px;
+    }
+}
+
+@media (max-width: 543px) {
+    #send-btn {
+        margin: 0;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        max-width: 543px;
+    }
+}

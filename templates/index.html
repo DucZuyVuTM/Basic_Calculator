@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend with Backend</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div id="main-container">
+        <h1>Connection between HTML/CSS and Python</h1>
+
+        <form action="/" method="post">
+            <fieldset>
+                <legend>Addition</legend>
+                <input type="hidden" name="op" value="+">
+                <input type="number" name="num1" step="any" placeholder="Write the first number" required>
+                <input type="number" name="num2" step="any" placeholder="Write the second number" required>
+                <button id="send-btn" type="submit">Send</button>
+            </fieldset>
+        </form>
+        
+        <form action="/" method="post">
+            <fieldset>
+                <legend>Subtraction</legend>
+                <input type="hidden" name="op" value="-">
+                <input type="number" name="num1" step="any" placeholder="Write the first number" required>
+                <input type="number" name="num2" step="any" placeholder="Write the second number" required>
+                <button id="send-btn" type="submit">Send</button>
+            </fieldset>
+        </form>
+        
+        <form action="/" method="post">
+            <fieldset>
+                <legend>Multiplication</legend>
+                <input type="hidden" name="op" value="*">
+                <input type="number" name="num1" step="any" placeholder="Write the first number" required>
+                <input type="number" name="num2" step="any" placeholder="Write the second number" required>
+                <button id="send-btn" type="submit">Send</button>
+            </fieldset>
+        </form>
+        
+        <form action="/" method="post">
+            <fieldset>
+                <legend>Division</legend>
+                <input type="hidden" name="op" value="/">
+                <input type="number" name="num1" step="any" placeholder="Write the first number" required>
+                <input type="number" name="num2" step="any" placeholder="Write the second number" required>
+                <button id="send-btn" type="submit">Send</button>
+            </fieldset>
+        </form>
+
+        <div id="result-div">
+        {% if result %}
+            <div id="result">
+                <p>Result: {{ result }}</p>
+            </div>            
+        {% endif %}
+        <button id="del-btn" type="button">Delete result</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
